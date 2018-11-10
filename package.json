@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "puppeteer": "^1.10.0"
+  },
+  "name": "ddpm-tdss",
+  "version": "1.0.0",
+  "description": "TDSS Bulletin Scraper with Puppeteer",
+  "main": "index.js",
+  "repository": "git@github.com:NonGT/ddpm-tdss.git",
+  "author": "Chonnarong Hanyawongse <chonnarong@nonagon.co.th>",
+  "license": "MIT"
+}
