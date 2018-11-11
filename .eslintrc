@@ -1,0 +1,14 @@
+{
+    "parser": "babel-eslint",
+    "extends": [
+      "airbnb"
+    ],
+    "env": {
+      "node": true
+    },
+    "rules": {
+      "import/prefer-default-export": "off",
+      "function-paren-newline": ["error", "consistent"]
+    }
+  }
+  

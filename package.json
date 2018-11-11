@@ -1,6 +1,26 @@
 {
   "dependencies": {
-    "puppeteer": "^1.10.0"
+    "babel-polyfill": "^6.26.0",
+    "bcrypt": "^3.0.2",
+    "dotenv": "^6.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-react": "^7.11.1",
+    "moment": "^2.22.2",
+    "puppeteer": "^1.10.0",
+    "restify": "^7.2.2",
+    "restify-cors-middleware": "^1.1.1",
+    "restify-oauth-server": "^0.2.0",
+    "superagent": "^4.0.0-beta.5",
+    "superagent-defaults": "^0.1.14",
+    "winston": "^3.1.0",
+    "winston-daily-rotate-file": "^3.5.1"
+  },
+  "scripts": {
+    "start": "nodemon src/*.js --exec babel-node",
+    "test": "jest --watch",
+    "test-ci": "jest",
+    "test-no-watch": "jest --forceExit",
+    "build": "babel src -d dist"
   },
   "name": "ddpm-tdss",
   "version": "1.0.0",
@@ -8,5 +28,19 @@
   "main": "index.js",
   "repository": "git@github.com:NonGT/ddpm-tdss.git",
   "author": "Chonnarong Hanyawongse <chonnarong@nonagon.co.th>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "editorconfig": "^0.15.2",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "nodemon": "^1.18.6",
+    "server-destroy": "^1.0.1"
+  }
 }
