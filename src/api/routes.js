@@ -1,3 +1,5 @@
+import TdssModel from '../models/tdss-model';
+
 export default function registerRoutes(server) {
   // Get oauth2 token (login).
   server.post('/api/v1/user/login', server.oauth.token());
@@ -37,14 +39,14 @@ export default function registerRoutes(server) {
   });
 
   server.get('/api/v1/bulletin/search', server.oauth.authenticate(), async (req, res, next) => {
-    // const proxyModel = new ProxyModel(server);
-    // try {
-    //   const response = await proxyModel.get(req.path(), req.query);
-    //   res.send(response);
-    // } catch (e) {
-    //   next(e);
-    //   return;
-    // }
+    const tdssModel = new TdssModel(server);
+    try {
+      const response = await tdssModel.searchBulletin(req.query);
+      res.send(response);
+    } catch (e) {
+      next(e);
+      return;
+    }
 
     next();
   });

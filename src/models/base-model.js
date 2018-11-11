@@ -10,5 +10,8 @@ export default class BaseModel {
 
     this.request = defaults();
     this.request.auth(upstreamUsername, upstreamPassword);
+
+    this.upstreamUsername = upstreamUsername;
+    this.upstreamPassword = upstreamPassword;
   }
 }
